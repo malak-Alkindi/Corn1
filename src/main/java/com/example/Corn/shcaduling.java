@@ -20,7 +20,6 @@ public class shcaduling {
         ExecutionTime executionTime = ExecutionTime.forCron(parser.parse("* * * * * * *"));
         DateTime nextExecution = executionTime.nextExecution(now));
         System.out.println(CronExpression.parse(exp));
-
         System.out.println("job   run");
     }
 }
