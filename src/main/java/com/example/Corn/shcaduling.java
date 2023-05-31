@@ -20,26 +20,13 @@ import java.util.Date;
 
 @Component
 public class shcaduling {
-    String cronn = "0 * * * * *";
-    @Scheduled(cron = "0 * * * * *")
+
+    @Scheduled(cron = "0 10 9-17 * * 0-5")
     public void schedule1() throws IOException {
 
-        CronTrigger trigger = new CronTrigger(cronn);
-        TriggerContext context = new TriggerContext() {
 
-            public Date lastScheduledExecutionTime() {
-                return null;
-            }
-
-            public Date lastActualExecutionTime() {
-                return null;
-            }
-
-            public Date lastCompletionTime() {
-                return null;
-            }
-        };
-      //  System.out.println("am here "+trigger.nextExecutionTime(context));
+       System.out.println("Problem 50: Write a CRON expression that runs a job every 10 minutes between 9:00 AM and 5:00 PM\n" +
+               "//on weekdays.");
 
 
 
