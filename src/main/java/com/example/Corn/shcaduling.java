@@ -25,8 +25,7 @@ public class shcaduling {
     public void schedule1() throws IOException {
 
 
-       System.out.println("Problem 47: Write a CRON expression that runs a job at 1:30 PM on the second to last Friday of every \n" +
-               "month.");
+       System.out.println("Problem 46: Write a CRON expression that runs a job every 2 hours between 10:00 PM and 6:00 AM.");
 
 
 
