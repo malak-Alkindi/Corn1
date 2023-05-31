@@ -21,12 +21,12 @@ import java.util.Date;
 @Component
 public class shcaduling {
 
-    @Scheduled(cron = "0 10 9-17 * * 0-5")
+    @Scheduled(cron = "0 0 9-17 * 11 0-5")
     public void schedule1() throws IOException {
 
 
-       System.out.println("Problem 50: Write a CRON expression that runs a job every 10 minutes between 9:00 AM and 5:00 PM\n" +
-               "//on weekdays.");
+       System.out.println("Problem 49: Write a CRON expression that runs a job at 3:00 AM on weekdays in the month of\n" +
+               "//\t\tNovember.");
 
 
 
