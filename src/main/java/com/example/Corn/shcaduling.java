@@ -17,6 +17,6 @@ public class shcaduling {
         boolean valid = CronExpression.isValidExpression(exp);
         System.out.println(valid);
 
-        System.out.println("job run");
+        System.out.println("job   run");
     }
 }
