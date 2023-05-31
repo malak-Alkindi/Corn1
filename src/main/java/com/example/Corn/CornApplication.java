@@ -14,10 +14,9 @@ public class CornApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CornApplication.class, args);
-//		Problem 49: Write a CRON expression that runs a job at 3:00 AM on weekdays in the month of
-//		November.
+//		Problem 48: Write a CRON expression that runs a job at 5:30 PM on the first day of every month.
 				//"s m h dom m dow"
-		String cronn = "0 0 3 * 11 0-5";
+		String cronn = "0 30 17 1 * *";
 		CronTrigger trigger = new CronTrigger(cronn);
 		TriggerContext context = new TriggerContext() {
 
