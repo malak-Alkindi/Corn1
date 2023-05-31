@@ -14,9 +14,8 @@ public class CornApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CornApplication.class, args);
-//		Problem 45: Write a CRON expression that runs a job at 8:00 AM every day, except for the last day of the
-//month.
-		String cronn = "0 0 08 L-1 * ?";
+//		Problem 1: Write a CRON expression that runs a job every five minutes.
+		String cronn = "0 */5 * * * *";
 
 		CronTrigger trigger = new CronTrigger(cronn);
 		TriggerContext context = new TriggerContext() {
