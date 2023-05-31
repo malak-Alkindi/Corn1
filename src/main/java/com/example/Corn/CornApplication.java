@@ -14,8 +14,8 @@ public class CornApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CornApplication.class, args);
-//		Problem 1: Write a CRON expression that runs a job every five minutes.
-		String cronn = "0 */5 * * * *";
+//		Problem 2: Write a CRON expression that runs a job every hour.
+		String cronn = "0 0 * * * *";
 
 		CronTrigger trigger = new CronTrigger(cronn);
 		TriggerContext context = new TriggerContext() {
