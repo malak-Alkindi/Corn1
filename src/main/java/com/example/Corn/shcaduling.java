@@ -11,12 +11,15 @@ import java.util.Date;
 
 @Component
 public class shcaduling {
-    @Scheduled(cron = "0 */5 * * * *")
+    @Scheduled(cron = "0 * * * * *")
     public void schedule1(){
-        String exp = "0 0 0 1 1 ? 3000";
-        boolean valid = CronExpression.isValidExpression(exp);
-        System.out.println(valid);
-
+        String exp = "0 * * * * *";
+        DateTime now = DateTime.now();
+        CronDefinition cronDefinition = CronDefinitionBuilder.instanceDefinitionFor(QUARTZ);
+        CronParser parser = new CronParser(cronDefinition);
+        ExecutionTime executionTime = ExecutionTime.forCron(parser.parse("* * * * * * *"));
+        DateTime nextExecution = executionTime.nextExecution(now));
+        System.out.println(CronExpression.parse(exp));
         System.out.println("job   run");
     }
 }
